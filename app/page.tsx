@@ -1,21 +1,31 @@
-import { BlogPosts } from 'app/components/posts'
+import { BlogPosts } from "app/components/posts";
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+      <h1 className="mb-8 text-2xl font-semibold tracking-tight">
+        Angel Romero Baez
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        Hi, I’m Angel! I’ve been a software developer and entrepreneur with a
+        deep passion for web development. The web changed my life by opening up
+        opportunities and providing knowledge I may not have found otherwise.
+        Now, I’m dedicated to giving back by building tools and services that
+        contribute to making the Internet a better place.
+      </p>
+      <p className="mb-4">
+        As a web developer, I’ve had the privilege of working with companies of
+        all sizes, helping them bring their ideas to life—whether it’s creating
+        a simple landing page or developing an MVP for fundraising efforts.
+      </p>
+      <p>
+        As an entrepreneur, I co-founded Prepa IN, a digital learning platform
+        currently available in Mexico that helps students earn their high school
+        diploma in less than four months.
       </p>
       <div className="my-8">
         <BlogPosts />
       </div>
     </section>
-  )
+  );
 }
