@@ -7,11 +7,11 @@ export default function Page() {
         Angel Romero Baez
       </h1>
       <p className="mb-4">
-        Hi, I’m Angel! I’ve been a software developer and entrepreneur with a
-        deep passion for web development. The web changed my life by opening up
-        opportunities and providing knowledge I may not have found otherwise.
-        Now, I’m dedicated to giving back by building tools and services that
-        contribute to making the Internet a better place.
+        Hi there! It's Angel. I'm a software developer and entrepreneur with a
+        deep passion and expertise for web development. The Internet changed my
+        life by opening up opportunities and providing knowledge I may not have
+        found otherwise. Now, I’m dedicated to giving back by building tools and
+        services that contribute to making the Internet a better place.
       </p>
       <p className="mb-4">
         As a web developer, I’ve had the privilege of working with companies of
