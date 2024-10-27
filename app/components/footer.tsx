@@ -8,6 +8,10 @@ const links = [
     label: "facebook",
   },
   {
+    href: "https://www.instagram.com/baez0r/",
+    label: "instagram",
+  },
+  {
     href: "https://x.com/baezor/",
     label: "x",
   },
