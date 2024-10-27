@@ -1,3 +1,38 @@
+const links = [
+  {
+    href: "/rss",
+    label: "rss",
+  },
+  {
+    href: "https://www.facebook.com/baezor/",
+    label: "facebook",
+  },
+  {
+    href: "https://x.com/baezor/",
+    label: "x",
+  },
+  {
+    href: "https://github.com/baezor/",
+    label: "github",
+  },
+  {
+    href: "https://www.linkedin.com/in/angelromerobaez/",
+    label: "linkedin",
+  },
+  {
+    href: "https://prepain.mx/angel/",
+    label: "prepain",
+  },
+  {
+    href: "https://profiles.wordpress.org/baezor/",
+    label: "wordpress",
+  },
+  {
+    href: "https://wellfound.com/u/baez",
+    label: "wellfound",
+  },
+];
+
 function ArrowIcon() {
   return (
     <svg
@@ -18,57 +53,18 @@ function ArrowIcon() {
 export default function Footer() {
   return (
     <footer className="mb-16">
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            href="https://x.com/baezor/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">x</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            href="https://github.com/baezor/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            href="https://www.linkedin.com/in/angelromerobaez/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">linkedin</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            href="https://prepain.mx/angel/"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">prepain</p>
-          </a>
-        </li>
+      <ul className="font-sm mt-8 flex md:flex-wrap flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        {links.map((link) => (
+          <li key={link.href}>
+            <a href={link.href} className="flex items-center space-x-2">
+              <ArrowIcon />
+              <span>{link.label}</span>
+            </a>
+          </li>
+        ))}
       </ul>
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
-        © Angel Romero Baez {new Date().getFullYear()} MIT Licensed
+        © Angel Romero Baez {new Date().getFullYear()} | MIT Licensed
       </p>
     </footer>
   );
