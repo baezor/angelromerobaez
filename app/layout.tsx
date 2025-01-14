@@ -37,6 +37,23 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Angel Romero Baez",
+  jobTitle: "Software Engineer",
+  email: "angel@romerobaez.com",
+  url: baseUrl,
+  sameAs: [
+    "https://www.facebook.com/baezor/",
+    "https://www.instagram.com/baez0r/",
+    "https://x.com/baezor/",
+    "https://github.com/baezor/",
+    "https://www.linkedin.com/in/angelromerobaez/",
+    "https://prepain.mx/angel/",
+  ],
+}
+
 const cx = (...classes) => classes.filter(Boolean).join(" ");
 
 export default function RootLayout({
@@ -53,6 +70,12 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      {/* Add JSON-LD to your page */}
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+      />
       <GoogleTagManager gtmId="GTM-M34CK8T" />
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
